@@ -54,13 +54,39 @@
     </header>
     <main>
         <!-- Add your images here -->
-        <img src="1.jpg" alt="Astrophotography Image 1">
-        <img src="2.jpg" alt="Astrophotography Image 2">
-        <img src="3.jpg" alt="Astrophotography Image 3">
+        <script>
+    const images = [
+        { src: '1.jpg', title: 'C/2023 A3 (Tsuchinshan–ATLAS)' },
+        { src: '2.jpg', title: 'Aurora Borealis' },
+        { src: 'your-image3.jpg', title: 'Image 3 Title' },
+        // Add more images here
+    ];
+
+    const main = document.querySelector('main');
+
+    images.forEach(image => {
+        const imageDiv = document.createElement('div');
+        imageDiv.style.textAlign = 'center';
+
+        const title = document.createElement('h3');
+        title.textContent = image.title;
+        title.style.marginBottom = '5px';
+
+        const img = document.createElement('img');
+        img.src = image.src;
+        img.alt = image.title;
+        img.style.width = '100%';  // Adjust size if needed
+
+        imageDiv.appendChild(title);
+        imageDiv.appendChild(img);
+
+        main.appendChild(imageDiv);
+    });
+</script>
+
         <!-- Add more images as needed -->
     </main>
     <footer>
-        <p>.</p>
         <p>&copy; 2024 Thomas | Astrophotography</p>
     </footer>
 </body>
