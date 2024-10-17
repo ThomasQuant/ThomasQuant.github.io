@@ -72,11 +72,17 @@
         title.textContent = image.title;
         title.style.marginBottom = '5px';
 
+        const link = document.createElement('a');
+        const pageUrl = image.src.replace('.jpg', '');  // Removes '.jpg' from the filename
+        link.href = `/${pageUrl}`;  // Points to a sub-site based on the filename
+
         const img = document.createElement('img');
         img.src = image.src;
         img.alt = image.title;
         img.style.width = '100%';  // Adjust size if needed
 
+        link.appendChild(img);
+        
         imageDiv.appendChild(title);
         imageDiv.appendChild(img);
 
