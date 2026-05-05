@@ -1,1 +1,2 @@
-## This website is to share my astrophotography.
+## This website is created to share my astrophotography.
+
